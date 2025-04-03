@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde4486f-897b-4f83-bef1-677bcba00700" name="Changes" comment="" />
+    <list default="true" id="bde4486f-897b-4f83-bef1-677bcba00700" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/employment-course-plus.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stage-01th/src/main/java/cn/uncleyumo/chapter01/Test0107.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage-01th/src/main/java/cn/uncleyumo/chapter01/test05/Test05.java" beforeDir="false" afterPath="$PROJECT_DIR$/stage-01th/src/main/java/cn/uncleyumo/chapter01/Test0105.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stage-01th/target/classes/cn/uncleyumo/chapter01/test05/Test05.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,22 +28,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="myGradleUserHome" value="$PROJECT_DIR$/../../../../gradle_src/gradle_repository" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\Dev_work\java_dev\maven_src\apache-maven-3.9.9" />
         <option name="localRepository" value="D:\Dev_work\java_dev\maven_src\maven_repository" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="D:\Dev_work\java_dev\maven_src\apache-maven-3.9.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2vAqPsqIi1YxlrdYdOQeH0XzDjx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +57,11 @@
   "keyToString": {
     "Application.MainOfChapter02.executor": "Run",
     "Application.Test05.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/Dev_work/java_dev/idea_pros/android_dev/android_dev_tools/android_plugins/android-242.21829.142.zip",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -51,15 +70,41 @@
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/Dev_work/java_dev/idea_pros/learn_java/learn-itheima/employment-course-plus/stage-01th/src/main/java/cn/uncleyumo/Main.java",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editor.preferences.inline.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Test05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.uncleyumo.chapter01.test05.Test05" />
+  <component name="RunManager" selected="Application.Test0107">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.uncleyumo.chapter01.test05.Test" />
+      <module name="stage-01th" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.uncleyumo.chapter01.test05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test0107" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.uncleyumo.chapter01.Test0107" />
+      <module name="stage-01th" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.uncleyumo.chapter01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.uncleyumo.chapter01.test05.Test" />
       <module name="stage-01th" />
       <extension name="coverage">
         <pattern>
@@ -73,6 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test0107" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Test05" />
       </list>
     </recent_temporary>
@@ -94,6 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1743598205643</updated>
       <workItem from="1743598206800" duration="5643000" />
+      <workItem from="1743681906660" duration="7996000" />
     </task>
     <servers />
   </component>

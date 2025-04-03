@@ -1,12 +1,11 @@
-package cn.uncleyumo.chapter01.test05;
+package cn.uncleyumo.chapter01;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author uncle_yumo
- * @fileName Test05
+ * @fileName Test0105
  * @proName employment-course-plus
  * @school Wuxi_University
  * @stuNumber 22344131
@@ -15,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @description
  **/
 
-public class Test05 {
+public class Test0105 {
     public static void main(String[] args) {
         practise13();
     }
