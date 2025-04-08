@@ -1,5 +1,7 @@
 package cn.uncleyumo.chapter03.practise.kotlin
 
+import kotlin.random.Random
+
 /**
  * @author uncle_yumo
  * @fileName Case01
@@ -10,7 +12,8 @@ package cn.uncleyumo.chapter03.practise.kotlin
  */
 
 fun main() {
-    practise02()
+//    practise02()
+    println(generateRandomOrderNumber())
 }
 
 fun practise02() {
@@ -36,4 +39,22 @@ fun practise01() {
     // 2. charAt() 方法
 
     // 3. split() 方法
+}
+
+/**
+ * 完成随机产生订单号，订单号一共有4组16位符号组成，每组用横杠-隔开，每组有4位。
+ * 每位可能是数字、大写字母、小写字母。例如：KomY-STXw-s8iX-TEqK。
+ * 请使用代码完成生成随机订单号的功能，并打印到控制台上。
+ */
+fun generateRandomOrderNumber(): String {
+    val template = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    val random = Random(System.currentTimeMillis())
+    val sb = StringBuilder()
+    for (i in 0..3) {
+        for (j in 0..3) {
+            sb.append(template[random.nextInt(template.length)])
+        }
+        sb.append("-")
+    }
+    return sb.substring(0, sb.length - 1)
 }
