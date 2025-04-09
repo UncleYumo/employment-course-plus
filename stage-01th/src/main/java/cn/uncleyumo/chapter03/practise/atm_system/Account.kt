@@ -20,7 +20,7 @@ data class Account(
     var money: Double? = null,
     var limit: Double? = null
 ) {
-    private fun getFormattedUserName(): String? {
+    fun getFormattedUserName(): String? {
         if (userName == null || sex == null) return null
         return userName + if (sex == '男') "先生" else "女士"
     }

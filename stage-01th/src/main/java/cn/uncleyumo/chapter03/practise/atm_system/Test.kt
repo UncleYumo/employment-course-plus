@@ -11,5 +11,4 @@ package cn.uncleyumo.chapter03.practise.atm_system
 
 fun main() {
     start()
-//    println(getUniqueCardId())
 }
