@@ -20,7 +20,7 @@ public class PinduoduoBargain {
         System.out.println("开始拼夕夕砍价模拟");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        User user = User.builder().name("张三").totalAmount(1000).build();
+        User user = User.builder().name("张三").totalAmount(10000).build();
         int count = 0;
 
         while (user.getTotalAmount() > 0) {

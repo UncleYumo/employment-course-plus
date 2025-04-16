@@ -33,17 +33,6 @@ class User implements Cloneable {
         }
     }
 
-//    public User deepClone() {
-//        try {
-//            User user = (User) super.clone();
-//            user.scores = new ArrayList<>(scores);
-//            return user;
-//        } catch (CloneNotSupportedException e) {
-//            System.out.println("Clone failed: " + e.getMessage());
-//            return null;
-//        }
-//    }
-
     public User deepClone02() {
         try {
             User user = (User) super.clone();
