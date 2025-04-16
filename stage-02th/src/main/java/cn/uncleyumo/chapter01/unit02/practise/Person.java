@@ -20,11 +20,20 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Person implements Serializable {
+public class Person implements Serializable, Cloneable {
     private String name;
     private Integer age;
 
     public void showMsg() {
         System.out.println("姓名" + name + "，年龄" + age);
+    }
+
+    @Override
+    public Person clone() {
+        try {
+            return (Person) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }

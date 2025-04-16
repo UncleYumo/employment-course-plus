@@ -1,9 +1,6 @@
 package cn.uncleyumo.chapter01.unit02.practise;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author uncle_yumo
@@ -16,6 +13,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Teacher extends Person {
     private String subject;
     public void teach() {
