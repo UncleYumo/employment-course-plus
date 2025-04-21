@@ -87,3 +87,45 @@
 > 3. BigDecimal类和double类型有什么区别？
 - BigDecimal类是一个用于表示精确小数的类，它提供了许多方法，如add()、subtract()、multiply()、divide()等，可以进行精确的运算，可以避免double类型精度丢失的问题。
 - double类型是一个基本的数据类型，它表示一个64位双精度浮点数，它具有固定的精度和范围，不能表示精确的数值，可能会丢失精度。
+
+### 单元练习10
+> 1. Date类的作用是什么？它的构造函数和常用方法有哪些？
+- Date类是一个表示日期和时间的类
+- 构造函数：Date()、Date(long time)、Date(int year, int month, int date)等
+- 常用方法：getTime()、setTime()、getYear()、getMonth()等
+
+> 2. SimpleDateFormat类的作用是什么？它的构造函数和常用方法有哪些？常用格式有哪些？
+- SimpleDateFormat类是一个用于格式化和解析日期的类、
+- 构造函数：SimpleDateFormat(String pattern)、SimpleDateFormat(String pattern, Locale locale)等
+- 常用方法，如format()、parse()等，可以格式化日期，也可以解析日期字符串
+
+### 单元练习11
+> 1. 请简要介绍一下Java 8中新增的日期时间API。
+- Java 8中引入了java.time包，提供了许多新的类和接口,如：
+    - LocalDate
+    - LocalTime
+    - LocalDateTime
+    - ZonedDateTime
+    - Duration
+    - Period
+
+> 2. 什么是ZoneId类和ZoneDateTime类？它的常用方法有哪些？
+- ZoneId类是一个时区标识符类，提供获取时区标识符的方法，如getId()、of()
+- ZoneDateTime类是一个时区aware的日期时间类，它提供了获取时区信息、获取日期和时间等方法，如getZone()、getYear()、getMonth()
+
+> 3. DateTimeFormatter是什么？它提供了哪些常用的格式化/解析方法？
+- DateTimeFormatter是一个用于格式化和解析日期和时间的类
+- 提供了许多常用的格式化/解析方法，如ofPattern()、ofLocalizedDateTime()
+
+### 单元练习12
+> 1. Arrays类的作用是什么？
+- Arrays类是一个用于操作数组的类，提供了许多静态方法
+- 如sort()、binarySearch()、equals()等，可以方便地对数组进行操作，如排序、查找等
+
+> 2. Arrays类的常用方法有哪些？
+- Arrays类提供了许多静态方法
+- 如sort()、binarySearch()、equals()
+
+> 3. 使用Arrays.sort()方法进行排序时，自定义排序规则的写法有几种呢？
+- 使用Comparator接口的实现类
+- 实现compare()方法，自定义排序规则

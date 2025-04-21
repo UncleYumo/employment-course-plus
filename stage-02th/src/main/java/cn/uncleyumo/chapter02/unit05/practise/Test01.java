@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class Test01 {
     public static void main(String[] args) {
         // 输入两个数，分别用BigDecimal表示
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("请输入两个数：");
         String num1 = "0.123123";
         String num2 = "0.1234234";
