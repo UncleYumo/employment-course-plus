@@ -1,74 +1,40 @@
 package cn.uncleyumo.chapter02.unit05.practise;
 
+import java.math.BigDecimal;
+import java.util.Scanner;
+
 /**
- * @author uncle_yumo
- * @fileName A
- * @createDate 2025/4/19 April
- * @school 无锡学院
+ * @author dev.uncleyumo.cn
+ * @fileName Test01
+ * @createDate 4/21/25 April
+ * @school Wuxi University
  * @studentID 22344131
  * @description
- * 按如下要求编写Java程序：：
- * ① 定义接口A，里面包含值为3.14的常量PI和 抽象方法double area()；计算面积
- * ② 定义接口B，里面包含 抽象方法void setColor(String c)；设置颜色
- * ③ 定义接口C，该接口继承了接口A和B，里面包含 抽象方法 double volume()；计算体积
- * ④ 定义圆柱体类Cylinder实现接口C，该类中包含三个成员变量：底圆半径radius、圆柱体的高height、颜色color，并进行方法重写
- * （area方法计算圆柱体的侧面积，setColor方法设置颜色，volume方法计算圆柱体的体积）
- * ⑤定义测试类及测试方法，创建Cylinder对象，打印该圆柱体对象的侧面积、体积及颜色
- * 提示：圆柱体的侧面积计算公式为：S侧=2πrh 圆柱体的体积计算公式为：V=πr²h
+ * 请使用StringBuilder类、StringJoiner类、Math类、BigDecimal类中的常用方法实现以下功能：
+ * ①输入两个数，分别用BigDecimal表示
+ * ②计算它们的乘积并对结果进行四舍五入
+ * ③最后用StringBuilder将结果输出为如下格式的字符串："数字1与数字2的乘积为XXX"
+ * 其中，数字1、数字2和XXX分别为对应的数值。
+ * 提示：使用Math中的round方法对结果进行四舍五入，使用BigDecimal的multiply方法计算乘积，使用StringBuilder的append方法进行字符串拼接。
  */
-
 public class Test01 {
     public static void main(String[] args) {
-        Cylinder cylinder = new Cylinder();
-        cylinder.radius = 5;
-        cylinder.height = 10;
-        cylinder.setColor("red");
-        System.out.println("面积：" + cylinder.area());
-        System.out.println("体积：" + cylinder.volume());
-        System.out.println(cylinder);
+        // 输入两个数，分别用BigDecimal表示
+//        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入两个数：");
+        String num1 = "0.123123";
+        String num2 = "0.1234234";
+        BigDecimal bigDecimal1 = new BigDecimal(String.valueOf(num1));
+        BigDecimal bigDecimal2 = new BigDecimal(String.valueOf(num2));
+        System.out.println("bigDecimal1: " + bigDecimal1 + " bigDecimal2: " + bigDecimal2);
+        // 计算它们的乘积并对结果进行四舍五入
+        BigDecimal result = bigDecimal1.multiply(bigDecimal2).setScale(10, BigDecimal.ROUND_HALF_UP);
+        System.out.println("result: " + result);
+
+        // 最后用StringBuilder将结果输出为如下格式的字符串："数字1与数字2的乘积为XXX"
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("数字1与数字2的乘积为");
+        stringBuilder.append(result);
+        System.out.println(stringBuilder);
     }
 }
-
-class Cylinder implements C {
-    public double radius;
-    public double height;
-    public String color;
-    @Override
-    public double area() {
-        return radius * radius * A.PI;  // 侧面积计算公式：S=2πrh
-    }
-
-    @Override
-    public void setColor(String c) {
-        this.color = c;
-    }
-
-    @Override
-    public double volume() {
-        return A.PI * radius * radius * height;  // 体积计算公式：V=πr²h
-    }
-
-    @Override
-    public String toString() {
-        return "Cylinder{" +
-                "radius=" + radius +
-                ", height=" + height +
-                ", color='" + color + '\'' +
-                '}';
-    }
-}
-
-interface A {
-    double PI = 3.14;
-    double area();
-}
-
-interface B {
-    void setColor(String c);
-}
-
-interface C extends A, B {
-    double volume();
-}
-
-

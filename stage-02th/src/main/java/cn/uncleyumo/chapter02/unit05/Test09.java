@@ -1,4 +1,4 @@
-package cn.uncleyumo.chapter02.unit05.practise;
+package cn.uncleyumo.chapter02.unit05;
 
 import lombok.*;
 

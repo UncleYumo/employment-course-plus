@@ -74,3 +74,16 @@
 
 > 2. 什么是方法重写?
 - 子类继承父类的方法，可以对父类的方法进行重写，即子类可以实现父类的功能，并可以增加新的功能。
+
+### 单元练习9
+> 1. StringBuilder类和String类有什么区别？
+- StringBuilder类是可变字符串，可以修改字符串内容，而String类是不可变的，不能修改字符串内容，在修改的时候实际是创建新的字符串
+- StringBuilder类提供了一些方法，如append()、insert()、delete()等，可以动态地修改字符串内容。
+- StringBuilder类在字符串拼接时效率更高，而String类在字符串拼接时效率较低。
+
+> 2. StringJoiner类是用来做什么的？
+- StringJoiner类是一个用于拼接字符串的类，它提供了一种简单的方式来将多个字符串连接起来，并添加分隔符，可以避免使用StringBuilder类手动拼接字符串，提高代码的可读性。
+
+> 3. BigDecimal类和double类型有什么区别？
+- BigDecimal类是一个用于表示精确小数的类，它提供了许多方法，如add()、subtract()、multiply()、divide()等，可以进行精确的运算，可以避免double类型精度丢失的问题。
+- double类型是一个基本的数据类型，它表示一个64位双精度浮点数，它具有固定的精度和范围，不能表示精确的数值，可能会丢失精度。
