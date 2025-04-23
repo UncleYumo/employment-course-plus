@@ -35,3 +35,17 @@
 > - 如果方法体只有一行代码，可以省略大括号和return关键字
 > - 如果接口添加了@FunctionalInterface注解，编译器会检查接口是否只有一个抽象方法，如果有，编译器会自动将接口转为函数式接口
 > - 如果抽象方法的形参类型都相同，可以省略形参类型，如：x,y -> x+y
+
+### 单元练习15
+> 1. Collection集合的分类包括哪些？
+- Collection接口是Java集合框架中的根接口，它定义了所有集合类的通用方法，如add、remove、size等
+- 其中，集合分为两类：一类为线性集合（List、Set等），另一类为非线性集合（Map等）
+
+> 2. Collection集合的常用方法有哪些？
+- add()、remove()、size()、isEmpty()、clear()、contains()、containsAll()、toArray()
+
+> 3. Collection集合的遍历方式有哪些？
+- 迭代器遍历
+- 增强for循环遍历
+- stream流遍历
+- 原版for循环遍历

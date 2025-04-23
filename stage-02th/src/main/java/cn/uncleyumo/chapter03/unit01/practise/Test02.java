@@ -1,6 +1,5 @@
 package cn.uncleyumo.chapter03.unit01.practise;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
