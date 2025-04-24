@@ -10,9 +10,15 @@ import java.util.Map;
  * @studentID 22344131
  * @description
  */
+
 public class Test {
     public static void main(String[] args) {
-        practise01();
+//        practise01();
+        practise02();
+    }
+
+    private static void practise02() {
+        
     }
 
     private static void practise01() {
