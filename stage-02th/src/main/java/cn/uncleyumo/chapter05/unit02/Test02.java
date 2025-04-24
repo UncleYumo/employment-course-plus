@@ -1,5 +1,8 @@
 package cn.uncleyumo.chapter05.unit02;
 
+import cn.uncleyumo.utils.ColorPrinter;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -13,7 +16,42 @@ import java.util.LinkedList;
 
 public class Test02 {
     public static void main(String[] args) {
-        practise02();
+        practise03();
+    }
+
+    private static void practise03() {
+        LocalQueue<Long> queue = new LocalQueue<>();  // 只能添加到末尾，只能从开头删除。
+        // 创建两个线程，一个线程往集合中添加数据，一个线程往集合中删除数据，看最终集合中的数据是否正确。
+
+        new Thread(() -> {
+            long count = 0;
+            while (count < 100000) {
+                if (queue.size() > 0) {
+                    ColorPrinter.INSTANCE.printlnFontGreen("取值：" + queue.poll() + " 队列大小: " + queue.size());
+                    count++;
+                } else {
+                    ColorPrinter.INSTANCE.printlnFontWhite("队列为空，等待中...");
+                }
+                try {
+                    Thread.sleep(3);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();  // 恢复中断状态
+                }
+            }
+        }).start();
+        new Thread(() -> {
+            long count = 0;
+            while (count < 100000) {
+                ColorPrinter.INSTANCE.printlnFontCyan("添值：" + count + " 队列大小: " + queue.size());
+                queue.add(count);
+                count++;
+                try {
+                    Thread.sleep(3);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();  // 恢复中断状态
+                }
+            }
+        }).start();
     }
 
     public static void practise02() {
@@ -50,19 +88,19 @@ class LocalQueue<T> {
     public void add(T t) {
         list.addLast(t);
     }
-    public T poll() {
+    public synchronized T poll() {
         if (list.isEmpty()) {
             return null;
         }
         return list.removeFirst();
     }
-    public T peek() {
+    public synchronized T peek() {
         return list.peek();  // 获取第一个元素，但不移除
     }
-    public int size() {
+    public synchronized int size() {
         return list.size();
     }
-    public void clear() {
+    public synchronized void clear() {
         list.clear();
     }
 }
