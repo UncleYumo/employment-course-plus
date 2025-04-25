@@ -17,7 +17,6 @@ public class Test02 {
     public static void main(String[] args) {
         practise();
     }
-
     private static void practise() {
         Map<String, Integer> map = new HashMap<>(Map.of(
                 "A", 0,
