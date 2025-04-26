@@ -1,6 +1,7 @@
 package cn.uncleyumo.chapter06.unit02;
 
 import cn.uncleyumo.utils.LogPrinter;
+import lombok.Getter;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,7 +23,8 @@ import static cn.uncleyumo.chapter06.unit01.Test01.autoSeparator;
 
 public class Test01 {
 
-    static String staticPath = System.getProperty("user.dir") + autoSeparator(List.of("stage-02th", "src", "main", "resources", "static"));
+    @Getter
+    public static String staticPath = System.getProperty("user.dir") + autoSeparator(List.of("stage-02th", "src", "main", "resources", "static"));
     public static Boolean flag = false;
 
     public static void main(String[] args) {
