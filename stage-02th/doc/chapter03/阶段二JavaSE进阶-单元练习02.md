@@ -72,3 +72,36 @@
 - 使用foreach: for(Map.Entry<K,V> entry: map.entrySet()){}
 - 使用迭代器: Iterator<Map.Entry<K,V>> iterator = map.entrySet().iterator();
 - 使用lambda: map.forEach((k,v)->{});  // 这个最推荐
+
+### 单元练习20
+
+> 1. 请简述Map的特点(Please describe the characteristics of Map)
+- Map是一种以键值对为形式的数据结构，存储的元素是唯一的，即Key是唯一的，Value可以重复
+
+> 2. 说出Entry键值对对象遍历Map集合的原理
+  (Please describe the principle of traversing Map collection through Entry key-value pair object)
+- Map集合的键值对对象遍历的原理是：先获取Map集合的Entry对象，再通过Entry对象获取键值对对象
+- 其中，Entry对象是存储Map元素的内部类，提供迭代方法以遍历Map集合
+
+> 3. 简述单列集合、双列集合、数组分别如何获取Stream流对象，并进行演示
+     (Briefly describe how single-column collections, double-column collections,and arrays respectively obtain Stream objects and demonstrate them)
+- 单列集合: 
+  - List集合：list.stream()
+  - Set集合：set.stream()
+- 双列集合:
+  - Map集合：map.entrySet().stream()
+- 数组：Arrays.stream(arr)
+
+> 4.已知数组arr1中有如下元素{郭靖，杨康}，arr2中有如下元素{黄蓉，穆念慈}，使用Stream将二者合并到List集合
+ (Given that arr1 has the following elements {Guojing, Yangkang}, arr2 has the following elements {Huangrong, Mu nianci},
+  use Stream to merge them into a List collection)
+- ```java
+List<String> list01 = List.of("郭靖", "杨康");
+List<String> list02 = List.of("黄蓉", "穆念慈");
+Stream<String> stream01 = list01.stream();
+Stream<String> stream02 = list02.stream();
+Stream<String> concat = Stream.concat(stream01, stream02);
+// List<String> list = concat.toList();
+List<String> list = concat.collect(Collectors.toList());
+System.out.println(list);
+```
