@@ -1,4 +1,4 @@
-package cn.uncleyumo.chapter04.practise;
+package cn.uncleyumo.chapter04;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
