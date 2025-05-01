@@ -27,7 +27,8 @@ public class Test01 {
                     autoSeparator(List.of("stage-02th", "src", "main", "resources", "static"));
 
     public static void main(String[] args) {
-        practise07();
+//        practise07();
+        System.out.println(staticPath);
     }
 
     private static void practise07() {
