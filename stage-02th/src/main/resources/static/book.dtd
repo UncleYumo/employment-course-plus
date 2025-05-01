@@ -1,0 +1,6 @@
+<!ELEMENT bookshelf (book+)>
+    <!ELEMENT book (bookName, author, price, serialNumber)>
+        <!ELEMENT bookName (#PCDATA)>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT serialNumber (#PCDATA)>

@@ -1,6 +1,9 @@
 package cn.uncleyumo.chapter07.unit01;
-
 import cn.uncleyumo.utils.LogPrinter;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
 
 import java.io.*;
 import java.util.*;
@@ -21,7 +24,30 @@ public class Test01 {
                     autoSeparator(List.of("stage-02th", "src", "main", "resources", "static"));
 
     public static void main(String[] args) {
-        practise02();
+//        practise03();
+
+    }
+
+    private static void practise03() {
+        // 1. create a parser object of dom4j
+        SAXReader saxReader = new SAXReader();
+        Document document = null;
+        // 2. use saxReader to parse the xml file to Document Object
+        try {
+            document = saxReader.read(staticPath + "data.xml");
+        } catch (Exception e) {
+            LogPrinter.INSTANCE.error(e.getMessage());
+        }
+        if (document == null) return;
+        Element rootElement = document.getRootElement();
+        System.out.println("element name: " + rootElement.getName());
+        Element user = rootElement.element("user");
+        if (user == null) return;
+        System.out.println("element name: " + user.getName());
+        List<Element> userItems = user.elements();
+        userItems.forEach(item -> {
+            System.out.println(item.getName() + ": " + item.getText());
+        });
     }
 
     private static void practise02() {

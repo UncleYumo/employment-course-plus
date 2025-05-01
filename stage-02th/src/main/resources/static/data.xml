@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <user id="001">
+        <name>张三</name>
+        <age>18</age>
+        <sex>男</sex>
+        <email>zhangsan@163.com</email>
+        <address>北京</address>
+        <phone>13888888888</phone>
+    </user>
+    <user id="002">
+        <name>李四</name>
+        <age>19</age>
+        <sex>女</sex>
+        <email>lisi@163.com</email>
+        <address>上海</address>
+        <phone>13888888889</phone>
+    </user>
+    <specialData>
+        <![CDATA[
+            << >> << && ^^ $$
+        ]]>
+    </specialData>
+</data>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE bookshelf SYSTEM "book.dtd">
+<bookshelf>
+    <book>
+        <bookName>Java从入门到放弃</bookName>
+        <author>Uncle·Yumo</author>
+        <price>120.99</price>
+        <serialNumber>22349172340</serialNumber>
+    </book>
+    <book>
+        <bookName>Kotlin从入门到放弃</bookName>
+        <author>Jimmy</author>
+        <price>100.99</price>
+        <serialNumber>22349172110</serialNumber>
+    </book>
+</bookshelf>

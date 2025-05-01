@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!-- 控制台日志输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <!-- 移除重复的 [%thread] 字段 -->
+            <pattern>%d{HH:mm:ss.SSS} %-5level %c : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 文件日志输出 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %c : %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+
+        <!-- 显式指定日志文件路径（避免使用 ~ 符号） -->
+        <file>./logback.log</file>
+
+        <!-- 滚动策略：按时间和文件大小 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 包含日期格式和索引的文件名模式 -->
+            <fileNamePattern>./logback.log.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <!-- 单个文件最大 1MB -->
+            <maxFileSize>1MB</maxFileSize>
+            <!-- 保留最近 7 天的日志 -->
+            <maxHistory>7</maxHistory>
+            <!-- 总日志大小上限 100MB -->
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- 根日志记录器 -->
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
