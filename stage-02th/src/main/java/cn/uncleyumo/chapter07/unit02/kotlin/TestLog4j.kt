@@ -13,7 +13,7 @@ import java.lang.Exception
  * @description
  */
 
-val LOGGER: Logger = LoggerFactory.getLogger("")
+val LOGGER: Logger = LoggerFactory.getLogger("TestLog4j")
 
 fun main() {
     practise01();
@@ -22,7 +22,7 @@ fun main() {
 fun practise01() {
     try {
         LOGGER.info("Main Method is running.")
-        division(1, 10)
+        division(1, 0)
         LOGGER.info("Main Method is completed.")
     } catch (e: Exception) {
         LOGGER.error(e.message)

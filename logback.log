@@ -6,3 +6,10 @@
 00:42:21.444 DEBUG  : The division method is running.
 00:42:21.444 DEBUG  : The division method is completed.
 00:42:21.444 INFO   : Main Method is completed.
+22:25:46.124 INFO  TestLog4j : Main Method is running.
+22:25:46.125 DEBUG TestLog4j : The division method is running.
+22:25:46.126 DEBUG TestLog4j : The division method is completed.
+22:25:46.126 INFO  TestLog4j : Main Method is completed.
+22:27:01.623 INFO  TestLog4j : Main Method is running.
+22:27:01.625 DEBUG TestLog4j : The division method is running.
+22:27:01.625 ERROR TestLog4j : / by zero

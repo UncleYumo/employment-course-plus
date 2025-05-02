@@ -33,7 +33,7 @@
     </appender>
 
     <!-- 根日志记录器 -->
-    <root level="DEBUG">
+    <root level="ALL">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
     </root>
