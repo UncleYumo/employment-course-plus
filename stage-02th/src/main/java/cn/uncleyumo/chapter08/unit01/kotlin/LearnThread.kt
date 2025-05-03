@@ -10,7 +10,7 @@ import java.lang.Thread.sleep
  * @createDate 5/2/25 May
  * @school Wuxi University
  * @studentID 22344131
- * @description
+ * @description 
  */
 
 class MyThread(tName: String) : Thread(tName) {
@@ -24,15 +24,6 @@ class MyThread(tName: String) : Thread(tName) {
     }
 }
 
-fun main() {
-    useThread()
-    for (i in 1..10) {
-        println(i)
-        ColorPrinter.printlnFontCyan("I am $i")
-        sleep(10)
-    }
-}
-
 fun useThread() {
     val t01: Thread = MyThread("0t00")
     val t02: Thread = MyThread("1t01")
@@ -40,3 +31,21 @@ fun useThread() {
     t02.start()
 }
 
+fun main() {
+//    useThread()
+//    for (i in 1..10) {
+//        println(i)
+//        ColorPrinter.printlnFontCyan("I am $i")
+//        sleep(10)
+//    }
+
+//    val t01: Thread = MyThread("0t00")
+//    t01.start()
+//    println(t01.name)
+
+//    val thread = Thread { println("HelloWorld") }
+//    thread.start()
+//    println(thread.name)
+
+
+}
