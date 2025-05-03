@@ -5,6 +5,8 @@ import cn.uncleyumo.utils.LogPrinter
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 /**
  * @author dev.uncleyumo.cn(BookAir13)
@@ -15,7 +17,7 @@ import kotlinx.coroutines.runBlocking
  * @description
  */
 
-fun main() = runBlocking {
+fun point() = runBlocking {
     val job = launch {
         try {
             repeat(100) { i ->  // launch a new coroutine and continue
@@ -30,4 +32,26 @@ fun main() = runBlocking {
     job.cancel()  // Cancel child coroutine
     job.join()  // Wait until child coroutine completes
     ColorPrinter.printlnFontRed("Main: Job is cancelled")
+}
+
+fun main() {
+    val executor: ExecutorService = Executors.newSingleThreadExecutor()
+    val task = executor.submit {
+        var i = 0
+        try {
+            while (!Thread.currentThread().isInterrupted) {
+                ColorPrinter.printlnFontCyan("Job is running ${i++}")
+                Thread.sleep(500L)
+            }
+        } catch (e: InterruptedException) {
+            // 线程被中断，退出循环
+            ColorPrinter.printlnFontRed("Main: Job is cancelled due to interruption")
+        } finally {
+            // 确保线程退出后关闭 ExecutorService
+            executor.shutdown()
+        }
+    }
+
+    Thread.sleep(1500L)
+    task.cancel(true)
 }
