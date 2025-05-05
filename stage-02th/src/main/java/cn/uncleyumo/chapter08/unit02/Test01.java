@@ -9,4 +9,6 @@ package cn.uncleyumo.chapter08.unit02;
  * @description
  */
 public class Test01 {
+    public static void main(String[] args) {
+    }
 }
