@@ -1,5 +1,6 @@
 package cn.uncleyumo.chapter09.unit02.kotlin
 
+import cn.uncleyumo.utils.ColorPrinter
 import cn.uncleyumo.utils.LogPrinter
 import java.net.DatagramPacket
 import java.net.DatagramSocket
@@ -34,6 +35,24 @@ class UDPClient(
         LogPrinter.info("Client\tSend data to ${packet.address}:${packet.port}")
         socket.send(packet)
         LogPrinter.info("Client\tSend data success")
+    }
+    fun sendDataByUserInput() {
+        var command = ""
+        while (true) {
+            ColorPrinter.printFontCyan(">> ")
+            command = readlnOrNull() ?: "null"
+            when (command) {
+                "exit", ":wq" -> {
+                    LogPrinter.info("Client\tExit")
+                    break
+                }
+                else -> {
+                    sendData(command)
+                }
+            }
+        }
+        socket.close()
+        LogPrinter.info("Client\tClose")
     }
 }
 

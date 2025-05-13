@@ -14,9 +14,8 @@ import kotlinx.coroutines.runBlocking
  */
 
 fun main() {
-//    testUDP()
-//    UDPServer().receiveData()
-    UDPClient().sendData()
+//    testUDP()  // The function is shit !!!
+    UDPClient().sendDataByUserInput()
 }
 
 // Use coroutine to send and receive data
@@ -25,7 +24,7 @@ fun testUDP() = runBlocking {
         UDPServer().receiveData()
     }
     launch {
-        delay(100L)
+        delay(1000L)
         UDPClient().sendData()
     }
 }
