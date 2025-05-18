@@ -24,11 +24,6 @@ class GroupChatServer(port: Int = 8081) {
 
     companion object {
         val onlineSockets = ConcurrentHashMap<String, Socket>()
-
-        @JvmStatic
-        fun main(args: Array<String>) {
-            GroupChatServer().start()
-        }
     }
 
     fun start() = runBlocking {
@@ -104,11 +99,7 @@ class GroupChatServer(port: Int = 8081) {
 
         if (targetUser == "all") {
             if (content == "ls") {
-                withContext(Dispatchers.IO) {
-                    dops.writeUTF(
-                        "当前在线用户：${onlineSockets.keys.joinToString(", ")}"
-                    )
-                }
+                withContext(Dispatchers.IO) { dops.writeUTF("当前在线用户：${onlineSockets.keys.joinToString(", ")}") }
                 return
             }
             sendMsgToAll("$senderName say to all: $content")
@@ -142,4 +133,8 @@ class GroupChatServer(port: Int = 8081) {
             }
         }
     }
+}
+
+fun main() {
+    GroupChatServer().start()
 }
