@@ -80,6 +80,14 @@ fun testMethod() {
             }"
         )
     }
+    println()
+    val method = clazz.getDeclaredMethod("comeOfAge")
+    method.isAccessible = true
+    val dog = Dog()
+    println(dog)
+    println()
+    method.invoke(dog)
+    println(dog)
 }
 
 fun testField() {
