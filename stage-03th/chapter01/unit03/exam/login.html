@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录 - 博学谷·黑马程序员线上教学</title>
+</head>
+<style>
+    html, body {
+        padding: 0;
+        margin: 0;
+        background-color: #E6F1FE;
+    }
+    .main-container {
+        width: 100%;
+        /*background-color: #969696;*/
+    }
+    .card-container {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        /*background-color: beige;*/
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 800px;
+        margin: 100px;
+    }
+    .login-password-text {
+        font-size: 20px;
+        font-weight: bold;
+        color: #0B13FF;
+        margin-right: 50px;
+    }
+    .login-authcode-text {
+        font-size: 20px;
+    }
+    .form-container {
+        width: 80%;
+        margin: 0 auto;
+        /*border: #444444 1px solid;*/
+    }
+    .input {
+        border: black 2px solid;
+        margin-bottom: 40px;
+        padding: 20px;
+        color: #969696;
+        font-size: large;
+    }
+</style>
+<body>
+<div class="main-container">
+    <div>
+        <img src="https://xuexi.boxuegu.com/study/_nuxt/img/header-new2.393a073.png" alt="logo">
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <h1 style="margin: 20px auto">账号登录</h1>
+
+            <div class="form-container">
+                <div style="margin-bottom: 40px">
+                    <span class="login-password-text">密码登录</span>
+                    <span class="login-authcode-text">验证码登录</span>
+                </div>
+                <div style="margin-bottom: 40px">
+                    <div class="input">请输入手机号或邮箱</div>
+                    <div class="input">请输入密码</div>
+                </div>
+                <div style="margin-bottom: 30px">
+                    <input type="radio" id="info" name="info" value="female">
+                    <label for="info">我已阅读并同意<span style="color: #0B13FF">《博学谷用户服务协议》</span>和<span style="color: #0B13FF">《隐私协议》</span></label><br>
+                </div>
+                <div style="margin-bottom: 20px; background-color: dodgerblue; display: flex; border: black 1px solid">
+                    <span style="margin: 20px auto; color: white; font-size: larger">登录</span>
+                </div>
+                <div style="margin-bottom: 10px; display: flex;">
+                    <span style="margin: 10px auto; font-size: larger">忘记密码</span>
+                </div>
+                <div style="margin-bottom: 20px; display: flex;">
+                    <span style="margin: 10px auto; font-size: larger">还没有账号？<span style="color: #75439D">立即注册</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

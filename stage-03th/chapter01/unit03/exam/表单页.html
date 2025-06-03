@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单页</title>
+    <link rel="stylesheet" href="./02.css">
+</head>
+<body>
+    <div style="width: 500px; margin: 0 auto;">
+        <form action="#">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="username"/>
+            <br>
+
+            <label>性别：</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">女</label>
+            <br>
+
+            <!-- 下拉列表 -->
+            <label for="province">省份:</label>
+            <select id="province" name="province">
+                <option value="jiangsu">江苏</option>
+                <option value="shanghai">上海</option>
+                <option value="sichuan">四川</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="remark">备注：</label>
+            <textarea name="remark" id="remark" rows="2" cols="40"></textarea>
+
+            <div style="text-align: right">
+                <a href="表格页.html">下一页</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

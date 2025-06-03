@@ -1,0 +1,35 @@
+<!--在E盘下创建一个HTML文件夹，并在该文件夹下新建一个网页（HTML快速入门.html），使用VSCode开发工具完成下列要求：-->
+<!--①设置网页的标题为：HTML快速入门-->
+<!--②在body标签中定义二级标题标签<h2>,标题内容为：学习基础标签-->
+<!--③将任意两张图片放到HTML/img文件夹下，分别通过绝对路径、相对路径的方式引入到网页中，将图片的宽度设置为width=300px，height=200px-->
+<!--④使用br标签换行后，将以下标语用两条横线和网页其它内容分开-->
+<!--标语内容：多一句没有，少一句不行，用更短的时间，教会更实用的技术！-->
+<!--⑤将上述标语的“多一句没有，少一句不行”写到span标签中，并定义class属性的值为 cls01,将“用更短的时间，教会更实用的技术！”写到另一个span标签中，并定义id属性为 id02-->
+<!--⑥使用内嵌样式并通过类选择器设置类cls01的颜色为红色。使用外联样式并通过id选择器设置id02的颜色为绿色-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>HTML快速入门</title>
+    <link rel="stylesheet" href="../practise/sina/main.css">
+</head>
+<style>
+    .cls01 {
+        color: red;
+    }
+</style>
+<body>
+<h2>学习基础标签</h2>
+<img alt="绝对路径" src="./image/img.jpg" width="300px" height="200px"/>
+<img alt="相对路径"
+     src="/home/uncleyumo/dev-work/java-dev/idea-pros/java-study-pros/employment-course-plus/stage-03th/chapter01/unit02/exam/HTML/img/img.jpg"
+     width="300px" height="200px"/>
+<br>
+<hr>
+<hr>
+<span class="cls01">多一句没有，少一句不行</span> <span id="id02">用更短的时间，教会更实用的技术！</span>
+</body>
+</html>

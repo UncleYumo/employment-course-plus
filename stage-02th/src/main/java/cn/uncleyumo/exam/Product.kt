@@ -22,7 +22,7 @@ data class Product(
 
     override fun hashCode(): Int {
         var result = name.hashCode()
-        result = 31 * result + price.hashCode()
+        result = 31 * result + price.hashCode()  // 31是素数，避免出现重复
         return result
     }
 
@@ -35,14 +35,8 @@ data class Product(
     }
 
     fun reduce(num: Int): Boolean {
-        if (num <= 0) {
-            LogPrinter.error("出库数量不能为负数或零！$num")
-            return false
-        }
-        if (count < num) {
-            LogPrinter.error("库存不足，无法进行减库存操作！当前库存：$count，请求数量：$num")
-            return false
-        }
+        if (num <= 0) return false
+        if (count < num) return false
         count -= num
         return true
     }
