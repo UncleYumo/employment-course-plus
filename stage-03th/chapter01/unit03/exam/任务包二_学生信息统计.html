@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-4</title>
+</head>
+<body>
+
+<h1 id="title"></h1>
+
+<script>
+    // 创建学生数组
+    let studentArr = [];
+
+    let stu01 = {
+        name: '张三',
+        score: 99
+    };
+    let stu02 = {
+        name: '李四',
+        score: 100
+    };
+    let stu03 = {
+        name: '王五',
+        score: 97
+    };
+    studentArr.push(stu01, stu02, stu03);
+
+    const getSumScore = (arr) => {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i].score;
+        }
+        return sum;
+    }
+
+    // 操作h1
+    let h1 = document.querySelector('#title');
+    h1.innerHTML = getSumScore(studentArr).toString();
+
+    // 直接输出
+    document.write(getSumScore(studentArr))
+</script>
+</body>
+</html>
